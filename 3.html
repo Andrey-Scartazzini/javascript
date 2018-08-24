@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function for_() {
+                var numero = 0;
+                for( var i= 3 ; i<12; i=i+2){
+                    numero = numero + i+"<br/>";
+                    document.getElementById("casa").innerHTML = numero;
+                }
+            }
+            function while_() {
+                var eu = parseInt(1);
+
+            function dowhile_() {         var numero = "";
+                while(eu<10){
+                    numero += eu+"<br/>";
+                    eu +=2;
+                }
+                document.getElementById("casa2").innerHTML = numero;
+            }
+                var eu = parseInt(1);
+                var numero = "";
+                do{
+
+                    numero += eu+"<br/>";
+                    eu +=2;
+                } while(eu<19)
+                    document.getElementById("casa3").innerHTML = numero;
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="for_()" value="for">
+        <input type="button" onclick="while_()" value="while">
+        <input type="button" onclick="dowhile_()" value="dowhile">
+        <p id="casa"> aqui </p>
+        <p id="casa2"> batata </p>
+        <p id="casa3"> macaco </p>
+    </body>
+</html>

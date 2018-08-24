@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        function Car(nome) {
+            this.nome = nome;
+        }
+        Car.prototype.aqui=function () {
+            return this.nome + " macaco";
+        };
+        Car.prototype.nsei = function (nome) {
+            this.nome = nome;
+        };
+        var car1 = new Car("miau");
+        var car2 = new Car("macaco");
+        document.getElementById("demo").innerHTML = "bem aqui:| " + car1.aqui();
+        document.getElementById("demo1").innerHTML = "car 1:| " + car1.nome;
+        document.getElementById("demo2").innerHTML = "car 2:| " + car2.nome;
+        car2.nsei(333);
+        document.getElementById("demo3").innerHTML = "car 3:| " + car2.nome;
+
+    </script>
+</head>
+<body>
+</body>
+</html>

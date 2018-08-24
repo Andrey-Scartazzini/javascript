@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function teste() {
+            var x = document.getElementById("div1");
+            var y = x.getElementsByTagName("input");
+            document.getElementById("frase").innerHTML = y[1].value;
+        }
+    </script>
+</head>
+<body>
+<div id="div0">
+    <div id="div1">
+        <div id="div2">
+            <input type="text">
+            <label for="adqw"></label><input type="text" id="adqw">
+        </div>
+        <input type="text">
+        <input type="text">
+    </div>
+    <input type="text">
+    <input type="text">
+</div>
+<input type="button" onclick="teste()">
+<p id="frase">Local encontrado</p>
+</body>
+</html>

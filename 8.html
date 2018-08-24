@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function criar() {
+            var p = document.createElement("p");
+            var node = document.createTextNode("Oha aquii");
+            p.appendChild(node);
+
+            var aqui =document.getElementById("div")
+            aqui.appendChild(p);
+        }
+        function remover() {
+            var d = document.getElementById("div");
+            var c = document.getElementById("p1");
+            d.removeChild(c)
+        }
+    </script>
+</head>
+<body>
+<input type="button" onclick="criar()" value="c">
+<input type="button" onclick="remover()" value="r">
+<div id="div">
+    <p id="p1">p1</p>
+</div>
+<br>
+<br>
+<br>
+
+<p id="tamanho"></p>
+<script>
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var heigth = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    x = document.getElementById("tamanho");
+    x.innerHTML = "Tele de altura: " + width + " e largura: " + heigth;
+</script>
+<br>
+<br>
+<p id="coisas"></p>
+<script>
+    var txtinfo="<p>Navegaor: " + navigator.appVersion + "</p>";
+    txtinfo += "<p>Cookies enable: " + navigator.cookieEnabled + "</p>";
+    txtinfo += "<p>Plataforma: " + navigator.platform + "</p>";
+    txtinfo += "<p>User-agent header: " + navigator.userAgent + "</p>";
+    document.getElementById("coisas").innerHTML = txtinfo;
+</script>
+</body>
+</html>

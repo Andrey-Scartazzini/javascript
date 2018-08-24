@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function aaa() {
+            var x = prompt("Nome","");
+            var y = 1;
+            var z = new Date();
+            z.setDate(z.getDate() + y);
+            var c_value = encodeURI(x) + ((y == null)?"":"; expires="+ z.toUTCString());
+            document.cookie = "name=" + c_value;
+        }
+        function miau() {
+            var name = "name="; //cookie pra procurar
+            var decodedCookie = decodeURIComponent(document.cookie);//transforma em grupos
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {//faz um array para os cookis
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {//seleciona o cooki especifico
+                    alert(c.substring(name.length, c.length));
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="aaa()"><br>
+    <input type="button" onclick="miau()">
+    <p id="aqui"></p>
+</body>
+</html>

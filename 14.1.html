@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready( function () {
+            $("#botao1").click(function () {
+                var d = document.getElementById("div1").innerHTML;
+                document.getElementById("div1").innerHTML = d + "<div> meio </div>";//coisas de preencher
+            });
+            $("#texto1").click(function () {
+                $("#texto").fadeIn(2000).delay(100);
+            });
+            $("#texto2").click(function () {
+                $("#texto").fadeOut();
+            });
+        })
+    </script>
+</head>
+<body>
+<button id="botao1">botao1</button>
+<div>
+    <div id="div1">
+        Inicio
+    </div>
+    <div>
+        Fim
+    </div>
+    <hr>
+    <p style="background-color: aquamarine;" id="texto1">aparecer</p>
+    <div id="sla">
+        <div id="texto" style="width:80px; height:80px; display:none; background-color: black;"></div>
+    </div>
+    <p style="background-color: aquamarine;" id="texto2">desaparecer</p>
+</div>
+</body>
+</html>

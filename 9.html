@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function teste() {
+            var palavra = prompt("Digite uma palavra.","Aqui");
+            if(palavra != null){
+                document.getElementById("aqui").innerHTML = palavra;
+            }
+        }
+        function repeticao() {
+            setInterval(function (){alert("Digite uma palavra.")}, 1000);
+        }
+        function aqui() {
+            setTimeout(function (){alert("Digite uma palavra.")}, 1000);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="teste()" value="Clique aqui">
+    <p id="aqui"></p>
+
+    <input type="button" onclick="repeticao()" value="repeticao">
+    <input type="button" onclick="aqui()" value="aqui">
+<script>
+    var myVar = setInterval(function (){myTimer()},1000);
+    function myTimer() {
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("outro").innerHTML = t;
+    }
+</script>
+    <p id="outro"></p>
+</body>
+</html>

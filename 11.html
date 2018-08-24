@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p>
+    Nome:<span id="jname"></span><br>
+    Email:<span id="jemail"></span><br>
+    Site:<span id="jsite"></span><br>
+    Cor:<span id="jcor"></span><br>
+</p>
+<script>
+    var myJ= [
+        {"name":"Macaco","email":"andrey","site":"meu","cor":"red"},
+        {"name":"senha","email":"outri","site":"siter","cor":"co2"}
+    ]
+    document.getElementById("jname").innerHTML = myJ[0].name;
+    document.getElementById("jemail").innerHTML = myJ[0].email;
+    document.getElementById("jsite").innerHTML = myJ[0].site;
+    document.getElementById("jcor").innerHTML = myJ[0].cor;
+</script>
+</body>
+</html>

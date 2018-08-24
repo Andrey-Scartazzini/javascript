@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script>
+            function sla(id) {
+                var numero1 = document.getElementById("numero1").value;
+                var numero2 = document.getElementById("numero2").value;
+                var string1 = numero1.toString();
+                var string2 = numero2.toString();
+                var stringtotal = string1 + id + string2;
+                var resultado = eval(stringtotal);
+                document.getElementById("resultado").innerHTML = (resultado);
+            }
+        </script>
+    </head>
+    <body>
+        <p>Numero 1</p><p><input type="number" id="numero1"></p>
+        <p>Numero 2</p><p><input type="number" id="numero2"></p>
+        <button type="button" onclick="sla('+')">adição</button>
+        <button type="button" onclick="sla('-')">Subtração</button>
+        <button type="button" onclick="sla('*')">Multiplicação</button>
+        <button type="button" onclick="sla('/')">Divilsão</button>
+        <button type="button" onclick="sla('**')">Exponenciação</button>
+        <button type="button" onclick="sla('//')">Parte Inteira</button>
+        <button type="button" onclick="sla('%')">módulo</button>
+        <p><strong>Resultado: <a id="resultado"></a></strong></p>
+    </body>
+</html>

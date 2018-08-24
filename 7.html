@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function teste() {
+            var x = document.getElementById("frase");
+            var y = document.getElementById("frase").innerHTML;
+            x.innerHTML = y + Date();
+        };
+        function imagem_1() {
+            document.getElementById("imagem").src = "1.png";
+        };
+        function imagem_2() {
+            document.getElementById("imagem").src = "2.png";
+        };
+        function imagem_3() {
+            document.getElementById("imagem").src = "3.png";
+        };
+    </script>
+</head>
+<body>
+    <input type="button" onclick="teste()">
+    <p id="frase">aqui</p>
+<br>
+    <input type="button" onclick="imagem_1()" value="1"><input type="button" onclick="imagem_2()" value="2"><input type="button" onclick="imagem_3()" value="3">
+<br>
+    <img id="imagem" src="1.png">
+</body>
+</html>

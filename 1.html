@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function ida() {
+            document.getElementById("teste").innerHTML = "Macaco";
+        }
+        function volta() {
+            document.getElementById("teste").innerHTML = "aolaasdjkhsd";
+        }
+    </script>
+</head>
+<body>
+    <p id="teste">aolaasdjkhsd</p>
+    <button type="button" onclick="ida()">Aqui</button>
+    <button type="button" onclick="volta()">outro</button>
+    <p onmouseover = "this.innerHTML='Ola'" onmouseout= "this.innerHTML='macaco'">macaco</p>
+</body>
+</html>

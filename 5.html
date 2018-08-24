@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function teste() {
+            x = document.getElementById("div1");
+            y = x.getElementsByTagName("p");
+            document.getElementById("frase").innerHTML = y[0].innerHTML;
+        }
+    </script>
+</head>
+<body>
+<div id="div0">
+    <div id="div1">
+        <div id="div2">
+            <p>
+                div2 p0
+            </p>
+            <p>
+                div2 p1
+            </p>
+        </div>
+        <p>
+            div1 p0
+        </p>
+        <p>
+            div1 p1
+        </p>
+    </div>
+    <p>
+        div0 p0
+    </p>
+    <p>
+        div0 p1
+    </p>
+    <input type="button" onclick="teste()">
+    <p id="frase">Local encontrado</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function a() {
+            x = ["macaco","minhoca"];
+            y = ["mestre","medusaa"];
+            z = x.concat(y);
+            out = "";
+            for (i = 0; i < z.length; i++) {
+                out = out + z[i] + "\n";
+            }
+            alert(out);
+        }
+        function macaco(c1,c2, callback) {
+            alert(" as cores" + c1 + ", " + c2);
+            callback();
+        }
+    </script>
+</head>
+<body>
+<input type="button" onclick="macaco('macaco','batata', function(){ alert('batatatatatat'); })" value="asasdasd">
+<input type="button" onclick="a()" value="aaaaaaa">
+</body>
+</html>
